@@ -1,0 +1,71 @@
+#keyboard {
+	font: 10px "Segoe UI", sans-serif;
+	color: #777;
+	padding: 4px 3px 4px 3px;
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	position: relative;
+	float: left;
+	margin-left: 10%;
+}
+#keyboard div { float: left; }
+
+.sect { border: 0px solid silver; }
+.msect { margin: 0 6px 0 6px; }
+.row { position: relative; clear: left;  overflow: visible; }
+
+.key {
+	background-color: #fdfdfd;
+	border: 1px solid #e0e0e0;
+	width: 23px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	margin: 1px;
+	overflow: hidden;
+}
+
+.pressed {
+	background-color: #66FF33;
+}
+
+.key:hover { cursor: pointer; }
+
+.logo {
+	background: white;
+	border: 1px solid #ddd;
+	height: 25px;
+	width: 104px;
+	margin: 1px;
+	border-radius: 3px;
+}
+.led {
+	width: 15px;
+	height: 2px;
+	border: 1px solid gray;
+	background: rgb(180, 255, 150);
+	margin: 5px;
+}
+
+.imargin  { margin-left: 29px; }
+.lmargin  { margin-left: 14px; }
+.flmargin { margin-left: 28px; }
+.tmargin  { margin-top: 8px; }
+.ftmargin { margin-top: 29px; }
+
+.arrow  { font-size: 7px; }
+.tfont  { font-size: 8px; }
+.smfont { font-size: 9px; }
+
+.backspace 	{ width: 50px; }
+.tab, .ctrl { width: 35px; }
+.backslash 	{ width: 38px; }
+.capslock 	{ width: 44px; }
+.enter 		{ width: 56px; }
+.lshift 	{ width: 62px; }
+.rshift		{ width: 65px; }
+.mod 		{ width: 31px; }
+.space 		{ width: 148px; }
+
+.dblwidth { width: 50px; }
+.dblheight { position: absolute; left: 81px; height: 54px; }

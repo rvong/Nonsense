@@ -1,0 +1,14 @@
+.raw-output {
+	font: 11px consolas, monospace;
+	color: #666;
+	width: 335px;
+	height: 210px;
+	margin: 0.5em;
+	border: 1px solid #ccc;
+}
+.raw-box {
+	float: left;
+	width: 345px;
+	margin-top: -5px;
+	margin-left: 5px;
+}

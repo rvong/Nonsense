@@ -1,0 +1,17 @@
+smoothie chart
+
+write faq, bugs, limitations browser
+list keys pressed in text box?
+maybe vk list
+
+max keys pressed
+least time between up and down.
+longest time between up and down.
+show time held on key up in list
+
+lag time - time between key downs?
+Compare, passmark, aqua's
+---------------
+on desktop version: get scan code?
+injected, flags, etc
+filter on desktop version

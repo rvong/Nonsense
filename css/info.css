@@ -1,0 +1,144 @@
+.info { width: 900px; }
+
+.info-box {
+	float: left;
+	border: 1px solid #aaa;
+	width: 140px;
+	display: inline-block;
+	padding: 0.2em;
+	margin: 0.1em;
+}
+
+.info-box ul { margin: 3px; margin-left: 1em; padding: 0; }
+.info-box li { list-style-type: none; }
+.info-box li span {
+	position: absolute;
+	left: 70px;
+}
+
+.info-title {
+	font: 14px "Segoe UI", san-serif;
+	text-align: center;
+}
+
+.gborder {
+	height: 2px;
+	margin: 2px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(left, #fff 0%, #ccc 50%, #fff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fff), color-stop(50%,#ccc), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #fff 0%,#ccc 50%,#fff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #fff 0%,#ccc 50%,#fff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #fff 0%,#ccc 50%,#fff 100%); /* IE10+ */
+	background: linear-gradient(to right, #fff 0%,#ccc 50%,#fff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=1 ); /* IE6-9 */
+}
+
+#markey {
+	background: white;
+	height: 48px;
+	border: 1px solid orange;
+	padding-right: 20%;
+}
+#markey div:nth-child(16) { opacity: .25; }
+#markey div:nth-child(15) { opacity: .30; }
+#markey div:nth-child(14) { opacity: .35; }
+#markey div:nth-child(13) { opacity: .40; }
+#markey div:nth-child(12) { opacity: .45; }
+#markey div:nth-child(11) { opacity: .50; }
+#markey div:nth-child(10) { opacity: .55; }
+#markey div:nth-child(9) { opacity: .60; }
+#markey div:nth-child(8) { opacity: .65; }
+#markey div:nth-child(7) { opacity: .70; }
+#markey div:nth-child(6) { opacity: .75; }
+#markey div:nth-child(5) { opacity: .80; }
+#markey div:nth-child(4) { opacity: .85; }
+#markey div:nth-child(3) { opacity: .90; }
+#markey div:nth-child(2) { opacity: .95; }
+#markey div:nth-child(1){ opacity: 1; }
+
+
+#markey-wrap {
+	width: 1000px;
+	float: right;
+}
+
+#markey-wrap div {
+	background-color: #fdfdfd;
+	border: 1px solid #aaa;
+	text-align: center;
+	margin: 1em 3px 100px 3px;
+	overflow: hidden;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	float: right;
+	height: 25px;
+	line-height: 25px;
+}
+
+#toast {
+	display: none;
+	position: fixed;
+	left: 50%; top: 70%;
+	line-height: 40px !important;
+	height: 40px;
+	min-width: 20%;
+	padding-left: 1em;
+	padding-right: 1em;
+	
+	margin-left:-10%;
+
+	text-align: center;
+
+	background-color: rgba(25,25,25, .8);
+	border-radius: 8px;
+	color: #eee;
+	font: 18px "Segoe UI", sans-serif;
+}
+
+#txt-current, #txt-last, #txt-max {
+	text-align: center;
+	width: 720px;
+}
+#txt-current { width: 99%; }
+
+
+.btn-copy {
+	background-color: #f8f8f8;
+	color: #555;
+	border-radius: 2px;
+	border: 1px solid silver;
+}
+#wtf {
+	position: fixed;
+	line-height: 40px !important;
+
+	min-width: 20%;
+
+	background-color: rgba(25,25,25, .8);
+	top: 50%;
+	left: 30%;
+
+	font: 20px sans-serif;
+	color: white;
+	border-radius:15px 5px 5px 15px;
+	padding: 2px;
+}
+
+#wtf_label {
+	background: white;
+	color: black;
+	float: left;
+	padding: 2px;
+	border-radius: 13px 5px 5px 13px;
+}
+
+/*.btn-copy.zeroclipboard-is-hover { background-color: #ececec; cursor: pointer;}
+*/
+.btn-copy.zeroclipboard-is-active { background-color: #e0e0e0; position: relative; top: 1px;}
+
+/*
+.btn-copy:hover { background-color: #ececec; cursor: pointer;}
+.btn-copy:active { background-color: #e0e0e0; position: relative; top: 1px;}
+
+

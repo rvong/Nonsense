@@ -1,0 +1,4 @@
+https://github.com/dennislwm/MLEA/blob/master/MQL5/Include/Utils/VirtualKeys.mqh
+http://msdn.microsoft.com/en-us/library/windows/desktop/dd375731%28v=vs.85%29.aspx
+http://msdn.microsoft.com/en-us/library/ee504832.aspx
+

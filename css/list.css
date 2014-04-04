@@ -1,0 +1,22 @@
+.list-wrap { border: 1px solid red; }
+
+.list-scroller {
+	margin-left: -1px;
+	height: 225px;
+	overflow-y: scroll;
+	border: 1px solid green;
+}
+
+.list-header, .list-content  { border-collapse: collapse; }
+
+.list-header td, .list-content td{
+	border: 1px solid #ccc;
+	text-align: center;
+	min-width: 50px;
+}
+
+.list-content tr:hover { background-color: #EBFAFA; }
+
+.list-content .cell-loc {
+	font-size: 10px;
+}

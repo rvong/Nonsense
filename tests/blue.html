@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#babe tr {
+	background: blue;
+}
+#babe tr:hover { background-color: yellow; }
+
+#scroller {
+	width: 400px;
+	height: 200px;
+	background: red;
+	overflow: auto;
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div id="scroller">
+		<table id="babe">
+			<tr><td>asdf</td></tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>
+
+<script>
+document.onkeydown = ade;
+
+function ade()  {
+	var tbl = document.getElementById('babe');
+	var x = document.createElement('tr');
+	
+	var cell = document.createElement('td');
+	cell.appendChild(document.createTextNode('haha'));
+	x.appendChild(cell);
+
+	var cell = document.createElement('td');
+	cell.appendChild(document.createTextNode('haha'));
+	x.appendChild(cell);
+	
+	tbl.insertBefore(x, tbl.firstChild);
+}
+</script>

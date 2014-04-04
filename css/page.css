@@ -1,0 +1,44 @@
+
+body {
+	font: 11px "Segoe UI", sans-serif;
+	color: #777;
+	margin: 0;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+h1 {
+	margin: 0;
+	font-size: 24px;
+	display: inline-block;
+}
+
+#wrap {
+	width: 800px;
+	background-color: #fafafa;
+	margin: auto;
+}
+
+#wrap > div { padding: 1em; }
+
+#header {
+	padding-left: 70px;
+	border: 1px solid green;
+}
+#content {
+	border: 1px solid red;
+}
+#content2 {
+	border: 1px solid #666;
+}
+#content3 {
+	border: 1px solid #666;
+}
+#foot {
+	border: 1px solid blue;
+}

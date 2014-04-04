@@ -1,0 +1,50 @@
+.tabs {
+    width: 760px;
+    height: 300px;
+    margin: auto;
+}
+
+.tabs > input[type="radio"] { display: none; }
+
+.tabs > input[type="radio"] + label:hover {
+	background: #f3f3f3;
+	padding: 5px 2.6em;
+	font-weight: bold;
+}
+
+.tabs > input[type="radio"] + label:active {
+	background: #e3e3e3;
+}
+.tabs > input[type="radio"] + label {
+	font: 11px sans-serif;
+	left: 10px;
+	position: relative;
+	margin-left: -10px;
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 5px 2.5em;
+    background-color:#eaeaea;
+	color: #333;
+}
+
+.tabs > input[type="radio"]:checked + label {
+    background-color:white;
+    font-weight: bold;
+    padding: 5px 3em;
+    border-bottom: 1px solid white;
+    z-index: 100;
+}
+
+.tabs > div {
+    display: none;
+    border: 1px solid #999;
+    background-color: white;
+    padding: 1em;
+    margin-top: -1px;
+    height: 251px;
+    overflow: auto;
+}
+
+#o1:checked ~ #t1, #o2:checked ~ #t2, #o3:checked ~ #t3,
+#o4:checked ~ #t4, #o5:checked ~ #t5, #o6:checked ~ #t6
+{ display: block; }

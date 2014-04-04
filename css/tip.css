@@ -1,0 +1,24 @@
+.tip {
+	background-color: #fdfdfd;
+	border: 1px solid #ddd;
+	width: 120px;
+	float: left;
+	font-size: 9px;
+	font-family: "Segoe UI", sans-serif;
+	margin: 1em;
+	padding: .5em .5em 0.2em .8em;
+	color: #888;
+}
+.tip ul {
+	margin: 0;
+	padding: 0;
+}
+.tip li {
+	margin: 0;
+	padding-bottom: .4em;
+	list-style-type: none;
+}
+.tip li span {
+	position: absolute;
+	left: 60px;
+}

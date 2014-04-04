@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KBDSentinel - Keyboard Test Tool</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Keyboard testing utility with statistics and heatmap.  In-browser.">
+        <link rel="stylesheet" href="css/page.css">
+        <link rel="stylesheet" href="css/keyboard.css">
+        <link rel="stylesheet" href="css/info.css">
+        <link rel="stylesheet" href="css/list.css">
+        <link rel="stylesheet" href="css/tip.css">
+        <link rel="stylesheet" href="css/tabs.css">
+        <link rel="stylesheet" href="css/heatmap.css">
+        <link rel="stylesheet" href="css/raw.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>						
+        <div id="wrap">
+            <div id="header">
+                <h1>KBDSentinel</h1>
+                keyboard test tool
+            </div>
+            <div id="content">
+				<div id="keyboard">
+					<!--<div id="heatmap"></div>-->
+					<div class="sect">
+						<div class="row smfont">
+							<div class="key" id="vk-27">Esc</div>
+							<div class="key imargin" id="vk-112">F1</div>
+							<div class="key" id="vk-113">F2</div>
+							<div class="key" id="vk-114">F3</div>
+							<div class="key" id="vk-115">F4</div>
+							<div class="key lmargin" id="vk-116">F5</div>
+							<div class="key" id="vk-117">F6</div>
+							<div class="key" id="vk-118">F7</div>
+							<div class="key" id="vk-119">F8</div>
+							<div class="key lmargin" id="vk-120">F9</div>
+							<div class="key" id="vk-121">F10</div>
+							<div class="key" id="vk-122">F11</div>
+							<div class="key" id="vk-123">F12</div>
+						</div>
+						<div class="row tmargin">
+							<div class="key" id="vk-192">~</div>
+							<div class="key" id="vk-49">1</div>
+							<div class="key" id="vk-50">2</div>
+							<div class="key" id="vk-51">3</div>
+							<div class="key" id="vk-52">4</div>
+							<div class="key" id="vk-53">5</div>
+							<div class="key" id="vk-54">6</div>
+							<div class="key" id="vk-55">7</div>
+							<div class="key" id="vk-56">8</div>
+							<div class="key" id="vk-57">9</div>
+							<div class="key" id="vk-48">0</div>
+							<div class="key" id="vk-189">-</div>
+							<div class="key" id="vk-187">=</div>
+							<div class="key smfont backspace" id="vk-8">Backspace</div>
+						</div>
+						<div class="row">
+							<div class="key smfont tab" id="vk-9">Tab</div>
+							<div class="key" id="vk-81">Q</div>
+							<div class="key" id="vk-87">W</div>
+							<div class="key" id="vk-69">E</div>
+							<div class="key" id="vk-82">R</div>
+							<div class="key" id="vk-84">T</div>
+							<div class="key" id="vk-89">Y</div>
+							<div class="key" id="vk-85">U</div>
+							<div class="key" id="vk-73">I</div>
+							<div class="key" id="vk-79">O</div>
+							<div class="key" id="vk-80">P</div>
+							<div class="key" id="vk-219">[</div>
+							<div class="key" id="vk-221">]</div>
+							<div class="key backslash" id="vk-220">\</div>
+						</div>
+						<div class="row">
+							<div class="key smfont capslock" id="vk-20">Caps Lock</div>
+							<div class="key" id="vk-65">A</div>
+							<div class="key" id="vk-83">S</div>
+							<div class="key" id="vk-68">D</div>
+							<div class="key" id="vk-70">F</div>
+							<div class="key" id="vk-71">G</div>
+							<div class="key" id="vk-72">H</div>
+							<div class="key" id="vk-74">J</div>
+							<div class="key" id="vk-75">K</div>
+							<div class="key" id="vk-76">L</div>
+							<div class="key" id="vk-186">;</div>
+							<div class="key" id="vk-222">'</div>
+							<div class="key smfont enter" id="vk-13">Enter</div>
+						</div>
+						<div class="row">
+							<div class="key smfont lshift" id="vk-16">Shift</div>
+							<div class="key" id="vk-90">Z</div>
+							<div class="key" id="vk-88">X</div>
+							<div class="key" id="vk-67">C</div>
+							<div class="key" id="vk-86">V</div>
+							<div class="key" id="vk-66">B</div>
+							<div class="key" id="vk-78">N</div>
+							<div class="key" id="vk-77">M</div>
+							<div class="key" id="vk-188">,</div>
+							<div class="key" id="vk-190">.</div>
+							<div class="key" id="vk-191">/</div>
+							<div class="key smfont rshift" id="vk-p16">Shift</div>
+						</div>
+						<div class="row smfont">
+							<div class="key ctrl lctrl" id="vk-17">Ctrl</div>
+							<div class="key mod" id="vk-91">Win</div>
+							<div class="key mod" id="vk-18">Alt</div>
+							<div class="key space" id="vk-32">Space</div>
+							<div class="key mod" id="vk-p18">Alt</div>
+							<div class="key mod" id="vk-92">Win</div>
+							<div class="key mod" id="vk-93">Menu</div>
+							<div class="key ctrl rctrl" id="vk-p17">Ctrl</div>
+						</div>
+					</div>
+					<!--End Section-->
+					<div class="sect msect">
+						<div class="row tfont">
+							<div class="key" id="vk-44">PrtScr</div>
+							<div class="key" id="vk-145">ScrLk</div>
+							<div class="key" id="vk-19">Pause</div>
+						</div>
+						<div class="row tmargin smfont">
+							<div class="key" id="vk-45">Ins</div>
+							<div class="key" id="vk-36">Hm</div>
+							<div class="key" id="vk-33">PgUp</div>
+						</div>
+						<div class="row smfont">
+							<div class="key" id="vk-46">Del</div>
+							<div class="key" id="vk-35">End</div>
+							<div class="key" id="vk-34">PgDn</div>
+						</div>
+						<div class="row ftmargin">
+							<div class="key arrow flmargin" id="vk-38">&#x25b2;</div>
+						</div>
+						<div class="row">
+							<div class="key arrow" id="vk-37">&#x25c0;</div>
+							<div class="key arrow" id="vk-40">&#x25bc;</div>
+							<div class="key arrow" id="vk-39">&#x25b6;</div>
+						</div>
+					</div>
+					<!--End Section-->
+					<div class="sect">
+						<div class="row">
+							<div class="logo">
+								kbd
+								<div class="led"></div>
+								<div class="led"></div>
+								<div class="led"></div>
+							</div>
+						</div>
+						<div class="row tmargin">
+							<div class="key" id="vk-144">Nm</div>
+							<div class="key" id="vk-111">/</div>
+							<div class="key" id="vk-106">*</div>
+							<div class="key" id="vk-109">-</div>
+						</div>
+						<div class="row">
+							<div class="key" id="vk-103">7</div>
+							<div class="key" id="vk-104">8</div>
+							<div class="key" id="vk-105">9</div>
+							<div class="key dblheight" id="vk-107">+</div>
+						</div>
+						<div class="row">
+							<div class="key" id="vk-100">4</div>
+							<div class="key" id="vk-101">5</div>
+							<div class="key" id="vk-102">6</div>
+						</div>
+						<div class="row">
+							<div class="key" id="vk-97">1</div>
+							<div class="key" id="vk-98">2</div>
+							<div class="key" id="vk-99">3</div>
+							<div class="key dblheight" id="vk-p13">E</div>
+						</div>
+						<div class="row">
+							<div class="key dblwidth" id="vk-96">0</div>
+							<div class="key" id="vk-110">.</div>
+						</div>
+					</div>
+					<!--End Section-->
+				</div>
+				<!--End Keyboard-->
+            </div>
+            <!--End Content-->
+            <div id="content2">
+				<div class="tabs">
+					<input type="radio" name="tg" id="o1" checked="checked">
+						<label for="o1">Info</label>
+					<input type="radio" name="tg" id="o2">
+						<label for="o2">Events</label>
+					<input type="radio" name="tg" id="o3">
+						<label for="o3">Data</label>
+					<input type="radio" name="tg" id="o4">
+						<label for="o4">Raw</label>
+					<input type="radio" name="tg" id="o5">
+						<label for="o5">Four</label>
+					<input type="radio" name="tg" id="o6">
+						<label for="o6">About</label>
+						
+					<div id="t1">
+						<div class="info">
+							<div class="info-box">
+								<div class="info-title">
+									Count
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li>Current <span id="lbl-totaldown">0</span></li>
+									<li>Down <span id="lbl-downcount">0</span></li>
+									<li>Up <span id="lbl-upcount">0</span></li>
+									<li>Events <span id="lbl-eventcount">0</span></li>
+									<li>&nbsp;</li>
+								</ul>
+								
+								<div class="info-title">
+									Records
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li>Current: <span id="lbl-maxdown">0</span></li>
+								</ul>
+
+								<div class="info-title">
+									Depress
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li>Quickest: <span id="lbl-quickest">0</span></li>
+									<li>Longest: <span id="lbl-longest">0</span></li>
+								</ul>
+
+								<div class="info-title">
+									Interval
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li>Quickest: <span id="lbl-quickest">0</span></li>
+									<li>Longest: <span id="lbl-longest">0</span></li>
+								</ul>
+							</div>
+							<div class="info-box">
+								<div class="info-title">
+									Last Key
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li>Type <span id="lbl-lastkey-type">Up</span></li>
+									<li>Keycode <span id="lbl-lastkey-keycode">13</span></li>
+									<li>Name <span id="lbl-lastkey-name">Return</span></li>
+									<li>Time <span id="lbl-lastkey-time">07:32:11.930</span></li>
+									<li>Loc. <span id="lbl-lastkey-loc">0</span></li>
+									<li>&nbsp;</li>
+									<li>Depress<span id="lbl-depress">265ms</span></li>
+									<li>Interval<span id="lbl-lag">186ms</span></li>
+								</ul>
+							</div>
+							<div class="info-box">
+								<div class="info-title">
+									Down
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li>Type <span id="lbl-down-type">Up</span></li>
+									<li>Keycode <span id="lbl-down-keycode">13</span></li>
+									<li>Name <span id="lbl-down-name">Return</span></li>
+									<li>Time <span id="lbl-down-time">07:32:11.930</span></li>
+									<li>Loc. <span id="lbl-down-loc">0</span></li>
+								</ul>
+							</div>
+							<div class="info-box">
+								<div class="info-title">
+									Up
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li>Type <span id="lbl-up-type">Up</span></li>
+									<li>Keycode <span id="lbl-up-keycode">13</span></li>
+									<li>Name <span id="lbl-up-name">Return</span></li>
+									<li>Time <span id="lbl-up-time">07:32:11.930</span></li>
+									<li>Loc. <span id="lbl-up-loc">0</span></li>
+								</ul>
+							</div>
+							<div class="info-box">
+								<div class="info-title">
+									Speed
+									<div class="gborder"></div>
+								</div>
+								<ul>
+									<li title="keystrokes per sec">KPS <span id="kps">0</span></li>
+									<li title="keystrokes per min">KPM <span id="kpm">0</span></li>
+									<li title="keystrokes per hour">KPH <span id="kph">0</span></li>
+									<li>Status <span id="kps-status">Ready</span></li>
+									<li>Sample <span id="kps-sample">0</span></li>
+									<li>Count <span id="kps-count">0</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div id="t2">
+						<div class="list-wrap">
+							<table class="list-header">
+								<tr>
+									<td>N.</td>
+									<td>Name</td>
+									<td>Keycode</td>
+									<td>Event</td>
+									<td>Time</td>
+									<td>Location</td>
+									<td>Depress</td>
+									<td>Interval</td>
+								</tr>
+							</table>
+							<div class="list-scroller">
+								<table class="list-content" id="event-list">
+									<tr>
+										<td>9999</td>
+										<td>Enter</td>
+										<td>13</td>
+										<td>D</td>
+										<td>07:32:11.930</td>
+										<td class="cell-loc">Loc</td>
+										<td>Depress</td>
+										<td>Interval</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+					<div id="t3">
+						<div class="list-wrap">
+							<table class="list-header">
+								<tr>
+									<td>VK Code</td>
+									<td>Virtual Key</td>
+									<td>Description</td>
+									<td>Down</td>
+									<td>Up</td>
+									<td>Min Duration</td>
+									<td>Max Duration</td>
+									<td>Last Pressed</td>
+									<td></td>
+								</tr>
+							</table>
+							<div class="list-scroller">
+								<table class="list-content" id="data-list">
+									<tr>
+										<td>1 (0x1)</td>
+										<td>VK_LBUTTON</td>
+										<td>Left Mouse Button</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>00:00:00.000</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+					<div id="t4">
+						<div class="raw-box">
+							<div class="info-title">
+								Down
+								<div class="gborder"></div>
+							</div>
+							<textarea class="raw-output" id="raw-output-down" readonly>Down</textarea>
+						</div>
+						<div class="raw-box">
+						<div class="info-title">
+								Up
+								<div class="gborder"></div>
+							</div>
+							<textarea class="raw-output" id="raw-output-up" readonly>Up</textarea>
+						</div>
+					</div>
+					
+					<div id="t5">
+						<input type="checkbox" id="mark">
+						<label for="mark">Mark Keys pressed</label>
+						<button>Reset Marks Keyboard</button>
+						
+						<input type="checkbox" id="hmap-checkbox" checked>
+						<label for="hmap-checkbox">Toggle Heatmap</label>
+						<button id="btn-resetheatmap">Reset Heatmap</button>
+
+						<div class="info-box" id="mouse-info">
+							<div class="info-title">
+								Mouse
+								<div class="gborder"></div>
+							</div>
+							<ul>
+								<li>clientX: <span id="clientX">0</span></li>
+								<li>clientY: <span id="clientY">1</span></li>
+								<li>layerX: <span id="layerX">0</span></li>
+								<li>layerY: <span id="layerY">1</span></li>
+								<li>offsetX: <span id="offsetX">0</span></li>
+								<li>offsetY: <span id="offsetY">1</span></li>
+								<li>pageX: <span id="pageX">0</span></li>
+								<li>pageY: <span id="pageY">1</span></li>
+								<li>x: <span id="x">0</span></li>
+								<li>y: <span id="y">1</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="t6">
+						<div class="tip">
+							<ul>
+								<li>MS VKey:<span>0</span></li>
+								<li>VK Descr:<span>0</span></li>
+								<li>Keycode:<span>145 (0x91)</span></li>
+								<li>Identifier:<span>SCROLL-LOCK</span></li>
+								<li>Descr:<span>The ScrollLk Key</span></li>
+								<li>Keydown:<span>5</span></li>
+								<li>Keyup:<span>5</span></li>
+								<li>Last press:<span>1656498</span></li>
+								<li>Quickest:<span>20ms</span></li>
+								<li>Longest:<span>100ms</span></li>
+							</ul>
+						</div>
+					</div>
+				 </div>
+				 <!-- End Tabs -->
+            </div>
+            <!--End Content 2-->
+            <div id="content3">
+				<div id="markey"><div id="markey-wrap">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
+					<div>6</div>
+					<div>7</div>
+					<div>8</div>
+					<div>9</div>
+					<div>10</div>
+					<div>11</div>
+					<div>12</div>
+					<div>13</div>
+					<div>14</div>
+					<div>15</div>
+					<div>16</div>
+				</div></div>
+				<input id="txt-current" type="text" placeholder="Current Key Combination" readonly>
+				<input id="txt-last" type="text" placeholder="Last Key Combination" value="test" readonly>
+				<button class="btn-copy" data-clipboard-target="txt-last" id="btn-lastcopy">Copy</button>
+				<input id="txt-max" type="text" placeholder="Max Key Combination" readonly>
+				<button class="btn-copy" data-clipboard-target="txt-max" id="btn-maxcopy">Copy</button>
+            </div>
+            <!--End Content 3--> 
+            <div id="foot">
+                &copy; 2013
+                <div id="notes">
+                    <ul>
+                        <li>Firefox bug: Firefox responds with keycode 91 instead of 92 for the Right Windows key.  Raises key location flag instead.  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=879617">Mozilla insists that Firefox should treat virtual key codes different from the OS it runs on, thereby creating its own standard.</a></li>
+                        <li>Chrome bugs: Except for numeric keys, key location is not reported on keyup.  Context menu - keyup event is not fired for the context menu button.</li>
+                        <li>No keydown event fired for Print Screen in any browser.  Use desktop version for this.</li>
+                        <li>Do data tables to sort all stats (e.g. get most pressed).</li>
+                        <li>Ref: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent</li>
+                        <li>Ref: http://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx</li>
+                        <li>DOM render affects timing. Single thread.</li>
+                        <li>&nbsp;</li>
+
+                        
+                        <li>Current - Number of keys down concurently.</li>
+                        <li>Depress - The amount of time a key is down.</li>
+                        <li>Down - Number of keydown events.</li>
+                        <li>Lag - Time between keydown events.</li>
+                        <li>Up - Number of keyup events.</li>
+                    </ul>
+                </div>
+            </div>
+            <!--End Footer-->
+        </div>
+        <!--End Wrap-->
+        
+        <!-- Toast -->
+
+        <div id="toast"><span id="toast_text">Text Copied to Clipboard</span></div>
+
+        <!-- JS includes -->
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="js/mapping.js"></script>
+        <script src="js/kps.js"></script>
+        <script src="js/hook.js"></script>
+        <script src="js/heat.js"></script>
+        <script src="js/hmap.js"></script>
+        <script src="js/tip.js"></script>
+        <script src="js/mouse.js"></script>
+		<script src="zc/ZeroClipboard.min.js"></script>
+		<script src="zc/setupZC.js"></script>
+    </body>
+</html>
+
+        <div id="wtf"><div id="wtf_label">Copied</div>WTFFFFFFFFFF</div>
+<!-- do info pages including ghosting, describe keys per sec and stuff to show on search -->
