@@ -34,7 +34,7 @@ Chrome =>
 When both SHIFT keys are released simultaneously, only one keyup event is triggered.
 Similarly for ALT and WIN.
 Firefox behaves similarly to Chrome.
-IE is similarly to Chrome, except both ALT keyup events are triggered when simultaneously released.
+IE is similarl to Chrome, except both ALT keyup events are triggered when simultaneously released.
 
 In Chrome, the context-menu keyup event is not triggered when the context-menu key is released.
 IE and Firefox do trigger the keyup event upon context-menu release.
