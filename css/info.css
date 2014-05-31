@@ -109,15 +109,15 @@
 	border-radius: 2px;
 	border: 1px solid silver;
 }
-#wtf {
+#copy {
 	position: fixed;
 	line-height: 40px !important;
 
-	min-width: 20%;
+	min-width: 10%;
 
 	background-color: rgba(25,25,25, .8);
 	top: 50%;
-	left: 30%;
+	left: 40%;
 
 	font: 20px sans-serif;
 	color: white;
@@ -125,11 +125,12 @@
 	padding: 2px;
 }
 
-#wtf_label {
+#copy-label {
 	background: white;
 	color: black;
 	float: left;
 	padding: 2px;
+	margin-right: 10px;
 	border-radius: 13px 5px 5px 13px;
 }
 

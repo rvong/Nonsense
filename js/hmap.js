@@ -32,4 +32,4 @@ function showToast(text) {
 	$('#toast').fadeIn(200).delay(700).fadeOut(500);
 }
 
-showToast('FUCK YOU');
+showToast('Toast Message Test');
