@@ -527,7 +527,7 @@ function KeyStruct(i) {
 
 	this.setDown = function(e) {
 		heatKey(e.keyCode);
-		
+
 		tot.downs++;
 		
 		if (! this.isDown) {
@@ -550,7 +550,7 @@ function KeyStruct(i) {
 			}
 
 			var eLoc = getELoc(e);
-			if (eLoc == NO_PAIR || (pairExists(e) && eLoc == LEFT_PAIR)) lightKeyDown(e.keyCode);
+			if (eLoc == NO_PAIR || eLoc == NUM_PAIR || (pairExists(e) && eLoc == LEFT_PAIR)) lightKeyDown(e.keyCode);
 			if (pairExists(e) && (eLoc == NO_PAIR || eLoc == RIGHT_PAIR || eLoc == NUM_PAIR)) lightPairDown(e.keyCode);
 			fixChromeMenuUp(e);
 		}
@@ -569,7 +569,7 @@ function KeyStruct(i) {
 			$('#txt-current').val(current);;
 
 			var eLoc = getELoc(e);
-			if (eLoc == NO_PAIR || (pairExists(e) && eLoc == LEFT_PAIR)) lightKeyUp(e.keyCode);
+			if (eLoc == NO_PAIR || eLoc == NUM_PAIR || (pairExists(e) && eLoc == LEFT_PAIR)) lightKeyUp(e.keyCode);
 			if (pairExists(e) && (eLoc == NO_PAIR || eLoc == RIGHT_PAIR || eLoc == NUM_PAIR)) lightPairUp(e.keyCode);
 
 			tot.current--;
